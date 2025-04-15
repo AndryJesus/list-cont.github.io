@@ -1,0 +1,266 @@
+:root {
+  --purplee: #9d15e6;
+  --lightpurplee: #b24fe8;
+  --superlightpurplee: #d396f4;
+  --gray: #55557b;
+  --white: #fff;
+  --black: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  background: url('imagenes/img.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+#main-form {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-form-input-container > label {
+  font-weight: 500;
+}
+
+.form-input {
+  outline: 1px solid gray;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.form-input::placeholder {
+ color: #6c6c88;
+}
+
+
+.main-form-helper-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: red;
+  display: none;
+}
+
+#main-form-btn {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.375rem;
+}
+
+#contacts-list {
+  margin: 0;
+  padding: 0.5rem;
+  list-style: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.375rem;
+  border: 2px solid rgba(255, 255, 255, .2);
+  height: 340px;
+}
+
+.edit-btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.delete-btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-style: none;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.contacts-list-item-name-input, .contacts-list-item-phone-input {
+  width: 100%;
+  border: solid 2px black;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.btns-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contacts-list-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#main-form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-valid {
+  outline: 1px solid green;
+}
+
+.input-invalid {
+  outline : 1px solid red;
+}
+
+.show-helper-text{
+  display: block;
+}
+
+@media (min-width: 768px){
+  #main-form {
+    width: auto;
+  }
+
+  #contacts-list {
+    width: auto;
+  }
+
+  .inputs-container {
+    flex-wrap: nowrap;
+  }
+
+  #main-container {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px){
+  #main-form {
+    width: auto;
+    border: 2px solid rgba(255, 255, 255, .2);
+  }
+
+  #contacts-list {
+    width: auto;
+    border: 2px solid rgba(255, 255, 255, .2);
+  }
+
+}
+
+.container-notes {
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.botonestext {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.botonestext input[type="text"] {
+  background: #fff;
+  padding: 10px;
+  border-style: none;
+  font-size: 1.5em;
+  border-radius: 15px;
+  border: solid 2px black;
+}
+
+.botonestext {
+  color: var(--black);
+}
+
+.botonestext input[type="text"]:focus {
+  outline: none;
+}
+
+.botones input[type="submit"]{
+  font-size: 2em;
+  width: 100%;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  background-color: black;
+}
+
+.botones input[type="submit"]:hover{
+  background-color: rgb(108, 4, 199);
+  cursor: pointer;
+  color: var(--white);
+}
+
+h1 {
+  text-align: center;
+  border-radius: 10px;
+  font-size: 3rem;
+  color: white;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin: 20px;
+  color: #fff;
+}
+
+.list-container {
+  margin: 0 auto;
+}
+
+.task-container{
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  padding: 10px 80px;
+  border-radius: 5px;
+  color: white;
+}
+
+#task-list {
+  background: transparent;
+  overflow: auto;
+  height: 25rem;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.contador {
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
